@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images</title>
+</head>
+<body>
+    <h1>Upload Images</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="files" accept="image/*" multiple required>
+        <input name="desc" type="text" placeholder="Description">
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <a href="{{ url_for('gallery') }}"><button>View Gallery</button></a>
+</body>
+</html>
