@@ -3,7 +3,6 @@ import os
 from ultralytics import YOLO
 from collections import Counter
 from PIL import Image
-import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -56,9 +55,11 @@ def analyze():
     
     class_counts = analyze_images(image_paths)
     
+    all_class_counts = class_counts.items()
+    
     most_common_class = class_counts.most_common(1)[0] if class_counts else None
     
-    return render_template('gallery.html', images=os.listdir(UPLOAD_FOLDER), most_common_class=most_common_class)
+    return render_template('gallery.html', images=os.listdir(UPLOAD_FOLDER), all_class_counts=all_class_counts, most_common_class=most_common_class)
 
 if __name__ == '__main__':
     app.run(debug=True)

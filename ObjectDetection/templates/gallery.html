@@ -16,8 +16,17 @@
     </div>
 
     {% if most_common_class %}
-    <h2>Analysis Results</h2>
+    <h3>Analysis Results</h3>
     <p>Most common object detected: {{ most_common_class[0] }} ({{ most_common_class[1] }} occurrences)</p>
+    {% endif %}
+
+    {% if all_class_counts %}
+        <h3>Detected Object Counts</h3>
+        <ul>
+            {% for class_name, count in all_class_counts %}
+                <li>{{ class_name }}: {{ count }}</li>
+            {% endfor %}
+        </ul>
     {% endif %}
     
     <br>
