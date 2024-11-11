@@ -16,7 +16,7 @@ This project is a web-based object detection application built with Flask and YO
 # Installation
 1. Clone the repository:
 ```sh
-git clone https://github.com/HaykuhiGhalamdaryan/Projects.git
+git clone https://github.com/HaykuhiGhalamdaryan/ObjectDetection.git
 cd ObjectDetection
 cd ObjectDetection
 ```
